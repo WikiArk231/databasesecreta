@@ -1,172 +1,232 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>U.A Satellite Database</title>
+<meta charset="UTF-8">
+<title>U.A Satellite System</title>
 
-  <style>
-    body {
-      margin: 0;
-      background: radial-gradient(circle at top, #0b0f1a, #000);
-      color: #00f7ff;
-      font-family: monospace;
-      padding: 40px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background: radial-gradient(circle at top, #0b0f1a, #000);
+  color: #00f7ff;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      text-shadow: 0 0 10px #00f7ff;
-    }
+/* HEADER */
+.header {
+  background: #020617;
+  border-bottom: 1px solid #00f7ff44;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .card {
-      display: flex;
-      gap: 20px;
-      border: 1px solid #00f7ff44;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-      background: rgba(0,0,0,0.7);
-      box-shadow: 0 0 10px #00f7ff33;
-      transition: 0.3s;
-    }
+.header h1 {
+  margin: 0;
+  color: #00f7ff;
+}
 
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px #00f7ff88;
-    }
+.nav a {
+  color: #00f7ff;
+  margin-left: 20px;
+  text-decoration: none;
+}
 
-    .card img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border: 2px solid #00f7ff;
-      border-radius: 10px;
-    }
+/* BANNER */
+.banner {
+  height: 300px;
+  background: url("imagem/banner.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .info h2 {
-      margin: 0 0 10px 0;
-    }
+.banner-text {
+  background: rgba(0,0,0,0.7);
+  padding: 20px 40px;
+  border: 1px solid #00f7ff44;
+  text-align: center;
+}
 
-    p {
-      margin: 5px 0;
-    }
-  </style>
+.banner-text h2 {
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* ALERTA */
+.alert {
+  background: #111;
+  color: #00f7ff;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #00f7ff33;
+  font-size: 0.9rem;
+}
+
+/* CARDS */
+.section {
+  padding: 40px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #00f7ff33;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f7ff66;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid #00f7ff;
+  padding: 8px 12px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #00f7ff;
+}
+
+/* DATABASE */
+.database {
+  padding: 40px;
+}
+
+.database h2 {
+  text-align: center;
+}
+
+.char-card {
+  display: flex;
+  gap: 20px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #00f7ff33;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.char-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid #00f7ff;
+}
+
+/* RODAPÉ */
+.footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #00f7ff33;
+  margin-top: 40px;
+  font-size: 0.8rem;
+}
+</style>
 </head>
 
 <body>
 
-  <h1>🛰️ U.A. SATELLITE DATABASE</h1>
+<!-- HEADER -->
+<div class="header">
+  <h1>TREE DIAGRAMS</h1>
+  <div class="nav">
+    <a href="#">Logs</a>
+    <a href="#">Unidades</a>
+    <a href="#">Relatórios</a>
+  </div>
+</div>
 
-  <!-- 01 -->
-  <div class="card">
-    <img src="imagem/hajime.jpg">
-    <div class="info">
-      <h2>〔01〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Hajime Umemiya</p>
+<!-- ALERTA -->
+<div class="alert">
+  ACESSO RESTRITO — SISTEMA CONFIDENCIAL
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  <div class="banner-text">
+    <h2>SISTEMA DE MONITORAMENTO GLOBAL</h2>
+    <p>Rede ativa — dados em tempo real</p>
+  </div>
+</div>
+
+<!-- SEÇÃO -->
+<div class="section">
+  <h2>Protocolos do Sistema</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="imagem/herois.jpg">
+      <div class="card-content">
+        <h3>Unidades</h3>
+        <p>Lista de combatentes ativos</p>
+        <a class="button">Ver dados</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagem/noticias.jpg">
+      <div class="card-content">
+        <h3>Ocorrências</h3>
+        <p>Eventos recentes monitorados</p>
+        <a class="button">Abrir logs</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- DATABASE -->
+<div class="database">
+  <h2>DATABASE CONFIDENCIAL</h2>
+
+  <div class="char-card">
+    <img src="imagem/umemiya.jpg">
+    <div>
+      <h3>Hajime Umemiya</h3>
       <p><b>Individualidade:</b> Storm Sovereign</p>
-      <p><b>Status:</b> Dizem boatos de que ele é filho do Sung, mas nada confirmado oficialmente. Aparentemente ele sofre de múltiplas personalidades. Ultimamente os últimos dados é de que ele tem vício em criar barreiras não funcionais.</p>
+      <p>Status: Instável — monitoramento ativo</p>
     </div>
   </div>
 
-  <!-- 02 -->
-  <div class="card">
+  <div class="char-card">
     <img src="imagem/misaki.jpg">
-    <div class="info">
-      <h2>〔02〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Misaki Todoroki</p>
+    <div>
+      <h3>Misaki Todoroki</h3>
       <p><b>Individualidade:</b> Zero Absoluto</p>
-      <p><b>Status:</b> Faltam dados precisos.</p>
+      <p>Status: Dados insuficientes</p>
     </div>
   </div>
 
-  <!-- 03 -->
-  <div class="card">
-    <img src="imagem/avdol.jpg">
-    <div class="info">
-      <h2>〔03〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Avdol Ryomen</p>
-      <p><b>Individualidade:</b> Dinoform</p>
-      <p><b>Status:</b> Faltam dados precisos.</p>
-    </div>
-  </div>
+</div>
 
-  <!-- 04 -->
-  <div class="card">
-    <img src="imagem/ren.jpg">
-    <div class="info">
-      <h2>〔04〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Ren Takeshi</p>
-      <p><b>Individualidade:</b> Osmosian</p>
-      <p><b>Status:</b> Absorve materiais e energias, altamente versátil.</p>
-    </div>
-  </div>
-
-  <!-- 05 -->
-  <div class="card">
-    <img src="imagem/kaiya.jpg">
-    <div class="info">
-      <h2>〔05〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Aokishi Kaiya</p>
-      <p><b>Individualidade:</b> Gene Drive</p>
-      <p><b>Status:</b> Faltam dados precisos.</p>
-    </div>
-  </div>
-
-  <!-- 06 -->
-  <div class="card">
-    <img src="imagem/naroma.jpg">
-    <div class="info">
-      <h2>〔06〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Naroma Tantos</p>
-      <p><b>Individualidade:</b> Fragmento Negro</p>
-      <p><b>Status:</b> Possível peça-chave para alguém importante.</p>
-    </div>
-  </div>
-
-  <!-- 07 -->
-  <div class="card">
-    <img src="imagem/kisuke.jpg">
-    <div class="info">
-      <h2>〔07〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Kisuke Uehara</p>
-      <p><b>Individualidade:</b> Hidromorfose Primordial</p>
-      <p><b>Status:</b> Faltam dados.</p>
-    </div>
-  </div>
-
-  <!-- 08 -->
-  <div class="card">
-    <img src="imagem/nyx.jpg">
-    <div class="info">
-      <h2>〔08〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Nyx A. Kurokami</p>
-      <p><b>Individualidade:</b> Azure Mind</p>
-      <p><b>Status:</b> Faltam dados.</p>
-    </div>
-  </div>
-
-  <!-- 09 -->
-  <div class="card">
-    <img src="imagem/sora.jpg">
-    <div class="info">
-      <h2>〔09〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Sora Mikage</p>
-      <p><b>Individualidade:</b> Phantom Threads</p>
-      <p><b>Status:</b> Faltam dados.</p>
-    </div>
-  </div>
-
-  <!-- 10 -->
-  <div class="card">
-    <img src="imagem/mei.jpg">
-    <div class="info">
-      <h2>〔10〕IDENTIDADE</h2>
-      <p><b>Nome:</b> Ishigami Mei</p>
-      <p><b>Individualidade:</b> Dragon Core</p>
-      <p><b>Status:</b> Desaparecida após batalha falha.</p>
-    </div>
-  </div>
+<!-- RODAPÉ -->
+<div class="footer">
+  UA Satellite System • Internal Network • Authorized Access Only
+</div>
 
 </body>
 </html>
